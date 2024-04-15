@@ -1,8 +1,7 @@
+package game;
 import java.util.ArrayList;
 import java.util.List;
 import cards.*;
-
-import cards.Card;
 
 public class Player {
     private String name;

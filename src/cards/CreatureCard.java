@@ -1,17 +1,22 @@
 package cards;
 import java.util.List;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import abilities.*;
 
 public class CreatureCard extends PermanentCard {
     private int power;
     private int toughness;
     private List<Ability> abilities;
+    private Image image;
 
-    public CreatureCard(String name, int cost, int power, int toughness, List<Ability> abilities) {
+    public CreatureCard(String name, int cost, int power, int toughness, List<Ability> abilities, String imagePath) {
         super(name, cost);
         this.power = power;
         this.toughness = toughness;
         this.abilities = abilities;
+        this.image = new ImageIcon(imagePath).getImage();
     }
 
     @Override
@@ -30,6 +35,20 @@ public class CreatureCard extends PermanentCard {
     	return "";
     }
     
+    public int getPower() {
+    	return power;
+    }
     
-    // Getters and setters
+    public int getToughness() {
+    	return toughness;
+    }
+    
+    public List<Ability> getAbilities() {
+    	return abilities;
+    }
+    
+    //Method to draw the card's image
+    public void draw(Graphics g, int x, int y) {
+    	g.drawImage(image, x,y,null);
+    }
 }

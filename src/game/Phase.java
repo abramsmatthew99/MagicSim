@@ -1,3 +1,5 @@
+package game;
+
 public enum Phase {
     BEGINNING {
         @Override

@@ -1,8 +1,7 @@
+package cards;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import cards.Card;
 
 public class Deck {
     private List<Card> cards;
